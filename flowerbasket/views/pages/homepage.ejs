@@ -1,0 +1,40 @@
+<div class="container mt-5 pt-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Combo Id</th>
+        <th>Flower Name</th>
+        <th>Basket Name</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% combos.forEach(function(i){ %>
+      <tr>
+        <td>
+          <%= i.id %>
+        </td>
+        <td>
+          <%= i.flowerName %>
+        </td>
+        <td>
+          <%= i.basketName %>
+        </td>
+        <td>
+          <%= i.price %>
+        </td>
+        <td>
+          <a
+            href="/combo/detail?id=<%=i.id%>"
+            type="button"
+            class="btn btn-dark"
+            role="btn btn-info"
+            >View Details</a
+          >
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

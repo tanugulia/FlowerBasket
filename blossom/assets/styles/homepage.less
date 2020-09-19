@@ -1,0 +1,86 @@
+.header {
+	.addSpace {
+		flex: 1;
+	}
+
+	.nav-link {
+		color: green;
+	}
+}
+.flowerList {
+	clear: both;
+}
+.flower_container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	float: left;
+
+	width: 48%;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding: 20px;
+	background-color: grey;
+	border-radius: 8px;
+}
+
+.flower_container img {
+	border-radius: 5px;
+}
+
+.flower_container .flower_details {
+	margin-left: 20px;
+	width: 100%;
+}
+
+.flower_container .flower_details .briefDetails {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	font-size: 10px;
+	border: 1px solid #707070;
+	color: #86949b;
+}
+
+.flower_container .flower_details .operations {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.flower_container .flower_details .operations .update {
+	background-color: #5ba82a;
+	border: 0;
+	color: white;
+}
+
+.flower_container .flower_details .operations .update a {
+	text-decoration: none;
+	color: white;
+}
+
+.flower_container .flower_details .operations .delete {
+	border: solid 1px #5ba82a;
+	color: #5ba82a;
+	background-color: white;
+}
+
+.flower_container .flower_details .operations .flowerPrice {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}

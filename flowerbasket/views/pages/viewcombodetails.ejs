@@ -1,0 +1,47 @@
+<div class="container">
+  <div style="margin-top: 80px; text-align: center;">
+    <h2> <%= combo[0].comboName%> Combo</h2>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table table-striped" style="width: 70%;">
+      <tbody>
+        <tr>
+          <td style="text-align: center; padding-top: 5%;">
+            <span style="font-size: x-large;"><%= combo[0].flowerName %></span>
+          </td>
+          <td style="text-align: center">
+            <img alt="Flower image" src=" <%= combo[0].flowerImageUrl %>" style="width: 100px; height: 100px;"></img>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center; padding-top: 5%;">
+            <span style="font-size: x-large;"><%= combo[0].basketName %></span>
+          </td>
+          <td style="text-align: center">
+            <img alt=" Basket image" src=" <%= combo[0].basketImageUrl %>" style="width: 100px; height: 100px;"></img>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <span style="font-size: x-large;">Price </span>
+          </td>
+          <td style="padding-left: 5%; text-align: center">
+            <span style="font-size: x-large;"><%= combo[0].price %></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<% var authencticated = sails.authenticated %>
+<% if(authencticated){%>
+<div class="button_place" style="text-align: center;">
+  <a href="/placeOrder?flowerName=<%=combo[0].flowerName%>&basketName=<%=combo[0].basketName%>" type="button"
+    class="btn btn-dark" role="btn btn-info" style="background-color: black; color: white;">Place Order</a>
+</div>
+<%}else{%>
+<div class="button_place" style="text-align: center;">
+  <a href="/login" type="button" class="btn btn-dark" role="btn btn-info"
+    style="background-color: black; color: white;">Please Login to Place Order</a>
+</div>
+<%}%>

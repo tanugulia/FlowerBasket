@@ -1,0 +1,32 @@
+<div class="container mt-5 pt-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Flower Name</th>
+        <th>Basket Name</th>
+
+        <th>Order Date</th>
+
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% orderhistory.forEach(function(i){ %>
+      <tr>
+        <td>
+          <%= i.flowerName %>
+        </td>
+        <td>
+          <%= i.basketName %>
+        </td>
+        <td>
+          <%= i.orderDate %>
+        </td>
+        <td>
+          <%= i.status %>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

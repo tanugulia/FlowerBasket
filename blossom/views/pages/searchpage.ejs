@@ -1,0 +1,58 @@
+<div class="header">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+      <div><a href="/" class="navbar-brand">Blossom</a></div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="addSpace"></div>
+        <form class="form-inline my-lg-0 my-2" method="post" action="/search">
+          <input type="text" class="form-control mr-sm-2" placeholder="Search flower" name="flowerName" />
+          <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        <div class="addSpace"></div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Past Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create">Create new</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container mt-5">
+
+  <body>
+    <br />
+    <br />
+    <div class="flowerList">
+      <% flowerList.forEach(function(flower){ %>
+      <div class="flower_container m-2" style="width: 50%;">
+        <img src="<%=flower.imageUrl %>" alt="Flower Image" height="150" width="170" />
+        <div class="flower_details">
+          <h4><%= flower.flowerName %></h4>
+          <div class="briedDesc">
+            <%= flower.details %>
+          </div>
+          <div class="operations mt-5">
+            <% var deleteUrl = '/delete?flowerId=' + flower.flowerId %> <% var
+            updateUrl = '/update?flowerId=' + flower.flowerId %>
+            <a href="<%=updateUrl %>" class="btn update"> Update</a>
+            <a href="<%= deleteUrl %>" class="btn delete">Delete</a>
+            <div class="flowerPrice">
+              <h3>$<%= flower.price %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </body>
+  <br />
+</div>

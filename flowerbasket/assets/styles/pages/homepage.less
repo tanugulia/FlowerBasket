@@ -1,0 +1,46 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  a {
+    display: flex;
+  }
+  form {
+    display: flex;
+    justify-content: stretch;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    float: left;
+
+    li {
+      color: #fff;
+      display: inline-block;
+      padding: 0 20px;
+      a {
+        color: #fff;
+        &:hover {
+          color: green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: green;
+}

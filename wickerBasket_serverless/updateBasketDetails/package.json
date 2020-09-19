@@ -1,0 +1,13 @@
+{
+  "name": "get_all_parts",
+  "version": "1.0.0",
+  "description": "Getting all parts from database",
+  "main": "app.js",
+  "author": "Maya",
+  "license": "MIT",
+  "dependencies": {
+    "aws-xray-sdk": "^3.1.0",
+    "axios": "^0.18.0",
+    "mysql": "^2.18.1"
+  }
+}
